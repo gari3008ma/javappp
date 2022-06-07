@@ -7,8 +7,8 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ServiceContext {
-    ServiceContext.Type[] value() default {};
+public @interface GenericContext {
+    GenericContext.Type[] value() default {};
 
     public @interface Type{
         String operation();

@@ -1,6 +1,6 @@
 package com.data.model;
 
-import com.data.annotation.ServiceContext;
+import com.data.annotation.GenericContext;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -11,9 +11,9 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 )
 @JsonIgnoreProperties
 @JsonNaming(SnakeCaseStrategy.class)
-@ServiceContext({@ServiceContext.Type(operation = "FULFILL", serviceType = "AMC") ,
-        @ServiceContext.Type(operation = "FULFILL", serviceType = "OTSR")})
-public class VasFulfillRequest implements ServiceRequestV2 {
+@GenericContext({@GenericContext.Type(operation = "FULFILL", serviceType = "AMC") ,
+        @GenericContext.Type(operation = "FULFILL", serviceType = "OTSR")})
+public class FulfillRequest implements GenericRequestV2 {
     private String referenceId;
     private String ServiceType;
     private String ServiceProvider;
